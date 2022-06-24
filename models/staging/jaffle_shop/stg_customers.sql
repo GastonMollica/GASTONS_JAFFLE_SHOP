@@ -7,3 +7,5 @@ WITH customers AS (
 )
 
 SELECT * FROM customers;
+
+/* Only main change is changing column id to customer_id
