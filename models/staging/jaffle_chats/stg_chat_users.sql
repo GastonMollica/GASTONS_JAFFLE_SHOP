@@ -7,7 +7,7 @@ WITH chat_users AS (
         last_name,
         email,
         ip_address
-    FROM raw.jaffle_chats.chatusers
+    FROM {{ source('jaffle_chats', 'chatusers') }}
 )
 
 SELECT * FROM chat_users
