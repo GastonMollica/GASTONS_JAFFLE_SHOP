@@ -10,4 +10,4 @@ WITH chat_users AS (
     FROM raw.jaffle_chats.chatusers
 )
 
-SELECT * FROM chat_users;
+SELECT * FROM chat_users

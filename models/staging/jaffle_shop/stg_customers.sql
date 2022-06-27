@@ -6,6 +6,4 @@ WITH customers AS (
     FROM raw.jaffle_shop.customers
 )
 
-SELECT * FROM customers;
-
-/* Only main change is changing column id to customer_id
+SELECT * FROM customers

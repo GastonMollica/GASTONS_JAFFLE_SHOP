@@ -9,4 +9,3 @@ WITH orders AS (
 
 SELECT * FROM orders
 
-/* The only changes this model has made from the initial data is renaming is to order_id
