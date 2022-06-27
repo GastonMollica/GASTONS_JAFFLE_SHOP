@@ -4,9 +4,12 @@ WITH payments AS (
         orderid,
         paymentmethod,
         status,
-        amount,
+        -- Amount was initially in cents but is now in dollars
+        amount / 100 as amount,
         created
     FROM raw.stripe.payment
 )
 
 SELECT * FROM payments
+
+--  comment
