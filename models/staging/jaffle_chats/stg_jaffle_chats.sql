@@ -7,7 +7,7 @@ WITH jaffle_chats AS (
         ended AS chat_ended_time,
         category,
         created_timestamp AS chat_created_date
-    FROM raw.jaffle_chats.chats
+    FROM {{ source('jaffle_chats', 'chats') }}
 )
 
-SELECT * FROM jaffle_chats;
+SELECT * FROM jaffle_chats
