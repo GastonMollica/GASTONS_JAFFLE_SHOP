@@ -1,7 +1,3 @@
-{{ config(
-    materialized='table'
-)}}
-
 with customers as (
 
     select * from {{ ref('stg_customers')}}
@@ -46,3 +42,5 @@ final as (
 )
 
 select * from final
+
+-- final model for customers table

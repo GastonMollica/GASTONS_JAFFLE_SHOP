@@ -13,3 +13,4 @@ WITH payments AS (
 SELECT * FROM payments
 
 --  comment goes here
+-- This model is a simple conversion on the amount column. It converts the value from cents to dollars
