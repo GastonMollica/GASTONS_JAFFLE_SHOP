@@ -12,4 +12,4 @@ WITH payments AS (
 
 SELECT * FROM payments
 
---  comment
+--  comment goes here
