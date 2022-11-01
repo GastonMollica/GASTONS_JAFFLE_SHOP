@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_jaffle_chats
+    columns:
+      - name: chat_id
+        tests:
+          - unique
+          - not_null
+      - name: category
+        tests:
+          - accepted_values:
+              values: ['other', 'jaffle_issue', 'payment_issue']

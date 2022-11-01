@@ -1,27 +1,22 @@
 with customers as (
-
-    select * from {{ ref('stg_customers')}}
-
+    SELECT * FROM {{ REF('stg_customers')}}
 ),
 
 orders as (
-
-    select * from {{ ref('stg_orders') }}
-
+    SELECT * FROM {{ REF('stg_orders') }}
 ),
 
 customer_orders as (
 
-    select
+    SELECT
         customer_id,
-
         min(order_date) as first_order_date,
         max(order_date) as most_recent_order_date,
         count(order_id) as number_of_orders
 
-    from orders
+    FROM orders
 
-    group by 1
+    GROUP BY 1
 
 ),
 
