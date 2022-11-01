@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_customers
+    description: One unique customer per row
     columns:
       - name: customer_id
         tests:
@@ -16,6 +17,8 @@ models:
           - unique
           - not_null
       - name: status
+        description: This is also just used for testing accepted values within the status column in the stg_orders model 
+        description: '{{ doc("order_status") }}'
         tests:
           - accepted_values:
               values:
