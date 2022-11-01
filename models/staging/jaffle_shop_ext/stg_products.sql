@@ -5,7 +5,7 @@ WITH products AS (
         cogs,
         product_name,
         is_active
-    FROM raw.jaffle_shop_ext.products
+    FROM {{ source('jaffle_shop_ext', 'products') }}
 )
 
 SELECT * FROM products
