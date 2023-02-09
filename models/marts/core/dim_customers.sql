@@ -1,9 +1,9 @@
 with customers as (
-    SELECT * FROM {{ REF('stg_customers')}}
+    SELECT * FROM {{ ref('stg_customers')}}
 ),
 
 orders as (
-    SELECT * FROM {{ REF('stg_orders') }}
+    SELECT * FROM {{ ref('stg_orders') }}
 ),
 
 customer_orders as (
