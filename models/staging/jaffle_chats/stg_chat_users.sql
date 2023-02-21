@@ -11,3 +11,6 @@ WITH chat_users AS (
 )
 
 SELECT * FROM chat_users
+
+
+/* comment
