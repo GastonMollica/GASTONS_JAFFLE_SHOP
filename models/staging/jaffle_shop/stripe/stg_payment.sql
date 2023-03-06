@@ -5,7 +5,7 @@ WITH payments AS (
         paymentmethod,
         status,
         -- Amount was initially in cents but is now in dollars
-        amount / 100 as amount,
+        {{ cents_to_dollars('amount') }} as amount,
         created
     FROM {{ source('stripe', 'payment') }}
 )
