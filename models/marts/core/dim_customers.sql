@@ -38,4 +38,4 @@ final as (
 
 select * from final
 
--- final model for customers table
+-- final model for customers table is the end. 
